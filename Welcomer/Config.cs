@@ -6,7 +6,7 @@ namespace Welcomer
     {
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; } = false;
-        public string PlayerWelcome { get; set; } = "Welcome to the server";
-        public ushort Duration { get; set; } = 5;
+        public string WelcomeMessage { get; set; } = "Welcome to the server, {player}, enjoy!";
+        public ushort WelcomeDuration { get; set; } = 5;
     }
 }
