@@ -12,8 +12,10 @@ namespace Welcomer
         {
             Config config = Plugin.Instance.Config;
 
-            string welcomeMessage = config.WelcomeMessage.Replace("{player}", ev.Player.DisplayNickname);
+            string welcomeMessage = config.WelcomeMessage;
             ushort welcomeDuration = config.WelcomeDuration;
+
+            welcomeMessage = welcomeMessage.Replace("{player}", ev.Player.Nickname);
 
             ev.Player.Broadcast(welcomeDuration, welcomeMessage);
         }
